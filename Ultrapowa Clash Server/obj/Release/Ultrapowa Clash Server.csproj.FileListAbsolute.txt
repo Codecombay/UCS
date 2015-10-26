@@ -1,0 +1,25 @@
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucs.exe.config
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucsconf.config
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucs.exe.manifest
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucs.application
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucs.exe
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\ucs.pdb
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\EntityFramework.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\Ionic.Zlib.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\MySql.Data.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\MySql.Data.Entity.EF6.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\Newtonsoft.Json.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\System.Data.SQLite.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\EntityFramework.xml
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\Newtonsoft.Json.xml
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\bin\Release\System.Data.SQLite.xml
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\Ultrapowa Clash Server.csprojResolveAssemblyReference.cache
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\ucs.TrustInfo.xml
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\ucs.exe.manifest
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\ucs.application
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\ucs.exe
+C:\Users\Administrateur.SERVEUR1\Downloads\debugged\ucs-master\Ultrapowa Clash Server\obj\Release\ucs.pdb
