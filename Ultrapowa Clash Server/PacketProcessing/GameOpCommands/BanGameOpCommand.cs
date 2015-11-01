@@ -51,7 +51,9 @@ namespace UCS.PacketProcessing
                             Debugger.WriteLine("Ban failed: id " + id + " not found");
                     }
                     catch(Exception ex)
+                    {
                         Debugger.WriteLine("Ban failed with error: " + ex.ToString()); 
+                    }
                 }
             }
             else
