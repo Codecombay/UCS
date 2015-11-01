@@ -44,7 +44,7 @@ namespace UCS.Network
 
             m_vIsRunning = true;
 
-            Console.WriteLine("Packet Manager started");
+            //Console.WriteLine("Packet Manager started");
         }
 
         private void IncomingProcessing()
@@ -57,7 +57,7 @@ namespace UCS.Network
                 {
                     p.Client.Decrypt(p.GetData());
                     //Console.WriteLine("R " + p.GetMessageType().ToString() + " (" + p.GetLength().ToString() + ")");
-                    Logger.WriteLine(p, "R");
+                    //Logger.WriteLine(p, "R");
                     MessageManager.ProcessPacket(p);
                 }
             }
@@ -79,16 +79,12 @@ namespace UCS.Network
                         p.Client.UpdateKey(sessionKey);
                     }
                     else
-                    {
                         p.Client.Encrypt(p.GetData());
-                    }
 
                     try
                     {
-                        if(p.Client.Socket != null)
-                        {
+                        if (p.Client.Socket != null)
                             p.Client.Socket.Send(p.GetRawData());
-                        }
                         else
                         {
                             ResourcesManager.DropClient(p.Client.GetSocketHandle());
