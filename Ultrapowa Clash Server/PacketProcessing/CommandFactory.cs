@@ -70,7 +70,7 @@ namespace UCS.PacketProcessing
             if (m_vCommands.ContainsKey(cm))
                 return Activator.CreateInstance(m_vCommands[cm], br);
             else
-                return null;
+                return -1;
         }
     }
 }
