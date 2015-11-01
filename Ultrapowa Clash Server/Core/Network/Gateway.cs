@@ -15,8 +15,6 @@ namespace UCS.Network
         const int 
             kPort = 9339,
             kHostConnectionBacklog = 30;
-        private static Socket m_vServerSocket;
-        IPAddress ip;
 
         public void Start()
         {
@@ -29,9 +27,7 @@ namespace UCS.Network
         void Disconnect()
         {
             if (m_vServerSocket != null)
-            {
                 m_vServerSocket.BeginDisconnect(false, new System.AsyncCallback(OnEndHostComplete), m_vServerSocket);
-            }
         }
 
         public static Socket Socket
@@ -134,7 +130,6 @@ namespace UCS.Network
 
                 return false;
             }
-
             return true;
         }
     }
