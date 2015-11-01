@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,30 +17,30 @@ namespace UCS.Core
 
         public ApiManager()
         {
-            string hostName = Dns.GetHostName();
-            string IP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); // `Dns.Resolve()` method is deprecated.
+            IPAddress ipAddress = ipHostInfo.AddressList[0];
+
+            string IP = ipAddress.ToString();
             string DebugPort = ConfigurationManager.AppSettings["DebugPort"];
+			
             m_vListener = new HttpListener();
+			
             if (Convert.ToBoolean(ConfigurationManager.AppSettings["DebugModeLocal"]))
             {
                 m_vListener.Prefixes.Add("http://localhost:" + DebugPort + "/debug/");
-                //m_vListener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
                 m_vListener.Start();
                 Console.WriteLine("API Manager started on http://localhost:" + DebugPort + "/debug/");
-                Action action = RunServer;
-                action.BeginInvoke(RunServerCallback, action);
             }
             else
             {
-                string DebugMode = IP + ":";
-                m_vListener.Prefixes.Add("http://" + DebugMode + DebugPort + "/debug/");
-                //m_vListener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
+                m_vListener.Prefixes.Add("http://" + IP + ":" + DebugPort + "/debug/");
                 m_vListener.Start();
                 Console.WriteLine("API Manager started on http://" + IP + ":" + DebugPort + "/debug/");
+
+            }
                 Action action = RunServer;
                 action.BeginInvoke(RunServerCallback, action);
-            }
-
         }
 
         private void StartListener(object data)
@@ -119,8 +119,11 @@ namespace UCS.Core
             }
             responseString += "</details>";
 
-            string hostName = Dns.GetHostName();
-            string LIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName()); // `Dns.Resolve()` method is deprecated.
+            IPAddress ipAddress = ipHostInfo.AddressList[0];
+
+            string LIP = ipAddress.ToString();
+
             responseString += "<center><p>Current local ip: " + LIP + "</p></center>";
             responseString += "<center><img src='https://d14.usercdn.com/i/02212/ea18nj5uxcll.png' style='width: 25%; height: 50%'></img></center></PRE></BODY></HTML>";
             byte[] buffer = System.Text.Encoding.UTF8.GetBytes(responseString);
