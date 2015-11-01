@@ -68,9 +68,7 @@ namespace UCS.PacketProcessing
         {
             uint cm = br.ReadUInt32WithEndian();
             if (m_vCommands.ContainsKey(cm))
-            {
                 return Activator.CreateInstance(m_vCommands[cm], br);
-            }
             else
             {
                 Console.Write("\t");
