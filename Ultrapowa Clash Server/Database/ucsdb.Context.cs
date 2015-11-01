@@ -18,6 +18,7 @@ namespace UCS.Database
         public ucsdbEntities(string connectionString)
             : base("name=" + connectionString)
         {
+            // A mettre en place.
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
