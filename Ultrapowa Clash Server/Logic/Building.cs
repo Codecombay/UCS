@@ -29,11 +29,11 @@ namespace UCS.Logic
                 HeroData hd = ObjectManager.DataTables.GetHeroByName(GetBuildingData().HeroType);
                 AddComponent(new HeroBaseComponent(this, hd));
             }
-            if (GetBuildingData().UpgradesUnits)
+            else if (GetBuildingData().UpgradesUnits)
                 AddComponent(new UnitUpgradeComponent(this));
-            if (GetBuildingData().UnitProduction[0] > 0)
+            else if (GetBuildingData().UnitProduction[0] > 0)
                 AddComponent(new UnitProductionComponent(this));
-            if (GetBuildingData().HousingSpace[0] > 0)
+            else if (GetBuildingData().HousingSpace[0] > 0)
             {
                 if (GetBuildingData().Bunker)
                     AddComponent(new BunkerComponent());
@@ -42,9 +42,9 @@ namespace UCS.Logic
             }
             if (GetBuildingData().Damage[0] > 0)
                 AddComponent(new CombatComponent());
-            if (GetBuildingData().ProducesResource != String.Empty)
+            else if (GetBuildingData().ProducesResource != String.Empty)
                 AddComponent(new ResourceProductionComponent());
-            if (GetBuildingData().MaxStoredGold[0] > 0 ||
+            else if (GetBuildingData().MaxStoredGold[0] > 0 ||
                 GetBuildingData().MaxStoredElixir[0] > 0 ||
                 GetBuildingData().MaxStoredDarkElixir[0] > 0 ||
                 GetBuildingData().MaxStoredWarGold[0] > 0 ||
@@ -58,5 +58,4 @@ namespace UCS.Logic
             return (BuildingData)GetData();
         }
     }
-
 }
