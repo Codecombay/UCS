@@ -117,6 +117,5 @@ namespace UCS.GameFiles
         public int NumObstacles { get; set; }
         public int StrengthWeight { get; set; }
 
-
     }
 }
