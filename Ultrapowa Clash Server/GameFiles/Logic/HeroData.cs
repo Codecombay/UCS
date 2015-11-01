@@ -116,7 +116,5 @@ namespace UCS.GameFiles
         public int StrengthWeight { get; set; }
         public int StrengthWeight2 { get; set; }
         public int AlertRadius { get; set; }
-
-
     }
 }
