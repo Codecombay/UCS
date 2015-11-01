@@ -43,9 +43,7 @@ namespace UCS.Core
             m_vAlliances = new Dictionary<long, Alliance>();
 
             if (Convert.ToBoolean(ConfigurationManager.AppSettings["useCustomPatch"]))
-            {
                 LoadFingerPrint();
-            }
 
             using (StreamReader sr = new StreamReader(@"gamefiles/default/home.json"))
             {
@@ -99,16 +97,12 @@ namespace UCS.Core
         {
             Alliance alliance = null;
             if (m_vAlliances.ContainsKey(allianceId))
-            {
                 alliance = m_vAlliances[allianceId];
-            }
             else
             {
                 alliance = m_vDatabase.GetAlliance(allianceId);
                 if (alliance != null)
-                {
                     m_vAlliances.Add(alliance.GetAllianceId(), alliance);
-                }
             }
             return alliance;
         }
@@ -178,9 +172,7 @@ namespace UCS.Core
             m_vDatabase.Save(ResourcesManager.GetInMemoryLevels());
             m_vDatabase.Save(m_vAlliances.Values.ToList());
             if (m_vTimerCanceled)
-            {
                 TimerReference.Dispose();
-            }
         }
 
         //Todo Cleanup
