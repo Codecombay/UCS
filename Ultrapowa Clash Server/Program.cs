@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,23 +44,14 @@ Y88b. .d88P Y88b  d88P Y88b  d88P
             ObjectManager pm = new ObjectManager();
             dp.Start();
             ph.Start();
-            g.Start();
             if (Convert.ToBoolean(ConfigurationManager.AppSettings["apiManager"]))
             {
                 ApiManager api = new ApiManager();
+            }
                 Debugger.SetLogLevel(Int32.Parse(ConfigurationManager.AppSettings["loggingLevel"]));
                 Logger.SetLogLevel(Int32.Parse(ConfigurationManager.AppSettings["loggingLevel"]));
                 Console.WriteLine("Server started on " + myIP + ":9339 and let's play Clash of Clans!");
                 Thread.Sleep(Timeout.Infinite);
-            }
-            else
-            {
-                Console.WriteLine("Api Manager disabled...");
-                Debugger.SetLogLevel(Int32.Parse(ConfigurationManager.AppSettings["loggingLevel"]));
-                Logger.SetLogLevel(Int32.Parse(ConfigurationManager.AppSettings["loggingLevel"]));
-                Console.WriteLine("Server started on " + myIP + ":9339 and let's play Clash of Clans!");
-                Thread.Sleep(Timeout.Infinite);
-            }
         }
     }
 }
