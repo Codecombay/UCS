@@ -70,14 +70,7 @@ namespace UCS.PacketProcessing
             if (m_vCommands.ContainsKey(cm))
                 return Activator.CreateInstance(m_vCommands[cm], br);
             else
-            {
-                Console.Write("\t");
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.Write("Unhandled");
-                Console.ResetColor();
-                Console.WriteLine(" Command " + cm.ToString() + " (ignored)");
                 return null;
-            }
         }
     }
 }
