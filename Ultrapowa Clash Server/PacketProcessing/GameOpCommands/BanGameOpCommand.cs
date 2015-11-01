@@ -24,15 +24,15 @@ namespace UCS.PacketProcessing
 
         public override void Execute(Level level)
         {
-            if(level.GetAccountPrivileges() >= GetRequiredAccountPrivileges())
+            if (level.GetAccountPrivileges() >= GetRequiredAccountPrivileges())
             {
-                if(m_vArgs.Length >= 2)
+                if (m_vArgs.Length >= 2)
                 {
                     try
                     {
                         long id = Convert.ToInt64(m_vArgs[1]);
                         var l = ResourcesManager.GetPlayer(id);
-                        if(l != null)
+                        if (l != null)
                         {
                             if (l.GetAccountPrivileges() < level.GetAccountPrivileges())
                             {
@@ -45,25 +45,17 @@ namespace UCS.PacketProcessing
                                 }
                             }
                             else
-                            {
                                 Debugger.WriteLine("Ban failed: insufficient privileges");
-                            }
                         }
                         else
-                        {
                             Debugger.WriteLine("Ban failed: id " + id + " not found");
-                        }
                     }
                     catch(Exception ex)
-                    {
                         Debugger.WriteLine("Ban failed with error: " + ex.ToString()); 
-                    }
                 }
             }
             else
-            {
                 SendCommandFailedMessage(level.GetClient());
-            }
         }
     }
 }
