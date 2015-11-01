@@ -15,6 +15,8 @@ namespace UCS.Network
         const int 
             kPort = 9339,
             kHostConnectionBacklog = 30;
+            private static Socket m_vServerSocket;
+            IPAddress ip;
 
         public void Start()
         {
